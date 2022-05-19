@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>análisis de modelos</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a class="logo">Análisis de Red Neuronal</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html"></a></li>
+							<li ><a href="index.html">Modelos entrenados</a></li>
+							<li class="active" ><a href="generic.html">Análisis red neuronal</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">Mayo 19, 2022</span>
+									<h1>Análisis de<br />
+									Identificador de números</h1>
+									<p>Esta red neuronal es utilizada para el reconocimiento de dígitos a mano del 1 al 9, mediante la comparación de estas con una base de datos. 
+
+										Scikit learn es una librería de código abierto para ayudar a la creación de modelos de aprendizaje automático donde de ésta derivan las siguientes librerías las cuales son usadas en los proyectos con distintos propósitos. En este caso son los siguientes: 
+										
+										<li>NumPy: librería de matriz n-dimensional base</li>
+										<li>Pandas: estructura de datos y análisis</li>
+										<li>SciPy: librería fundamental para la informática científica</li>
+										<li>Matplotlib: trazado completo 2D</li>
+										<li>Ipython: consola interactiva mejorada</li>
+										<li>SymPy: matemática simbólica</li>
+										
+									</p>
+								</header>
+								<div class="image main"><img src="images/imagen_2.png" alt="" /></div>
+								<p>Esta red neuronal inicia importando la librería  matplotlib.pyplot,en el código se abrevia como ptl. 
+									Aquí es la encargada de crear y personalizar gráficos en el programa. De scikit learn se importa la amplia base de 
+									datos con el modulo import datasets. Asimismo, se importa el algoritmo de aprendizaje supervisado,
+									desarrollado por Vladimir Vapnik, que está ampliamente relacionado con problemas de clasificación
+									y regresión. Por otra parte, el código import svm, y el código import metrics ayudan a la elaboración de
+									una matriz de confusión la cual es necesaria para validar el funcionamiento y precisión de la red. En la
+									siguiente línea del código el “import train_test_split” tiene como función dividir los arreglos aleatoriamente 
+									entre datos de prueba y datos de entrenamiento.</p>
+								<div class="image main"><img src="images/imagen_1.png" alt="" /></div>
+								<p>Al mismo tiempo,“image.reshape” recibe los valores de el ancho y alto de la matriz, que como dijimos antes es 8x8. 
+									A continuación, “ax.show” muestra graficamente la imagen que con el parametro”plt.cm.gray_r” se le indica que imprima 
+									estas matrices en escala de color gris, y “ax.set_title” imprime un mensaje arriba de lo anteriormente mostrado</p>
+								<div class="image main"><img src="images/imagen_3.png" alt="" /></div>
+								<p>En esta parte de código lo que hace es hacer otra gráfica, y mediante un ciclo for que tiene como variables iteradoras 
+									ax, image, prediction  que esto lo hace en axes, los valores de X de prueba y el valor de predicción hecho anteriormente. 
+									Lo que hace es mostrar y juntar la gráfica de una matriz de píxeles en escala de grises mostrando el valor predecido</p>
+								<div class="image main"><img src="images/imagen_4.png" alt="" /></div>
+								<p>Con  classification_report(
+									Se miden los resultados del modelo con datos como precisión, recuerdo, puntaje f1, y apoyo. La precisión evalúa los capacidad
+									del clasificador de no etiquetar una predicción verdadera que en realidad es falsa o mas sencillo, para las predicciones que 
+									fueron clasificadas verdaderas que ¿porcentaje fue correcto?, este porcentaje se evalúa con la fórmula TP/(TP + FP) donde TP 
+									son los Verdaderos Positivos que es cuando un caso es positivo y se predijo positivo y  FP – Falsos Positivos donde un caso es 
+									negativo pero predicho de manera positiva. Recuerdo es el porcentaje de las instancias que encuentra positivas que ¿porcentaje 
+									se clasificaron correctamente?, puntaje f1 es el porcentaje de las predicciones positivas que fueron correctas donde esta se 
+									mide con la formula  F1 = 2*(Recordar * Precisión) / (Recordar + Precisión) y a la vez hacer un promedio de recordar y precisión
+									para que sea más fácil evaluar el modelo. Soporte viene a ser los datos de entrenamiento que fueron usados en la red mediante el 
+									conjunto de datos de entrada</p>
+								<div class="image main"><img src="images/imagen_5.png" alt="" /></div>
+							</section>
+
+					</div>
+	</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
